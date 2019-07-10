@@ -1,0 +1,24 @@
+            {% for line in student %}
+                <div class="a">
+                
+                    <p>
+                        <img src="{{line.picture}}" style="width:300px;height:296px;">
+                    </p>
+                    
+                    <span class="b">                    
+                        <p>
+                            姓名：{{line.name}}
+                        </p>
+                        <p>
+                            年龄：{{line.age}}
+                        </p>                    
+                        <p>
+                            {% for hobby,c in line.hobby.items %}
+                                <p>
+                                    {{ hobby }}:{{ c }}
+                                </p>
+                            {% endfor %}
+                        </p> 
+                    </span>              
+                </div>
+            {% endfor %}
